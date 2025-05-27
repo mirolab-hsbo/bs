@@ -33,7 +33,7 @@ def consumer():
                 consumer_sleep = True 
             else:            
                 buffer_counter -= 1
-                print(f"    [Consumer] Counter:", buffer_counter)
+                print(f"[Consumer] Counter:", buffer_counter)
                 time.sleep(0.2) # Zeit der Verarbeitung emulieren
                 if buffer_counter == MAX_SIZE-1:
                     producer_sleep = False

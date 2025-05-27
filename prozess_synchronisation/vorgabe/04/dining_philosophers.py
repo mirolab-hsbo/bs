@@ -19,16 +19,11 @@ def philosopher(philosopher_id):
         left.acquire()
         print(f"Philosoph {philosopher_id} nimmt erste Gabel auf ...")       
         right = forks[(philosopher_id + 1) % N]
-        if not right.locked():
-            time.sleep(1)
-            right.acquire()
-            print(f"\tPhilosoph {philosopher_id} isst.")
-            time.sleep(random.uniform(0.5, 1.0))
-            right.release()
-            left.release()
-        else:
-            print(f"\tPhilosoph {philosopher_id} legt erste Gabel wieder zurück.")
-            left.release()
+        right.acquire()
+        print(f"\tPhilosoph {philosopher_id} isst.")
+        time.sleep(random.uniform(0.5, 1.0))
+        right.release()
+        left.release()
         print(f"Philosoph {philosopher_id} legt die Gabeln weg.")
 
 # Starte alle Philosophen-Threads
