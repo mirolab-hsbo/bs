@@ -1,0 +1,9 @@
+services:
+    webserver:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 80:80
+        volumes:
+            - ./htdocs:/usr/local/apache2/htdocs
