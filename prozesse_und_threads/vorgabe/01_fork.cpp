@@ -11,19 +11,19 @@ int main()
 
     if (pid == 0)
     {
-        cout << "begin" << endl; // TODO: child or parent?
+        cout << "begin (child|parent?)" << endl; // TODO: child or parent?
         for (int i = 0; i < limit; i++)
         {
-            // TODO: child or parent?
+            cout << "(child|parent?): " << j << endl; // TODO: child or parent?
         }
         cout << "end" << endl; // TODO: child or parent?
     }
     else if (pid > 0)
     {
-        cout << "begin parent" << endl; // TODO: child or parent?
+        cout << "begin (child|parent?)" << endl; // TODO: child or parent?
         for (int j = 0; j < limit; j++)
         {
-            // TODO: child or parent?
+            cout << "(child|parent?): " << j << endl; // TODO: child or parent?
         }
         cout << "end" << endl; // TODO: child or parent?
     }
